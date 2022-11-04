@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { NavLink, Switch } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { getUser } from '../services/userAPI';
 
 class Header extends Component {
