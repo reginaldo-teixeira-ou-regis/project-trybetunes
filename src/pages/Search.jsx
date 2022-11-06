@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
+import Loading from '../components/Loading';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 
 class Search extends Component {
@@ -39,7 +40,7 @@ class Search extends Component {
     return (
       <div data-testid="page-search">
         <Header />
-        { loading ? <p>Carregando...</p>
+        { loading ? <Loading />
           : (
             <form>
               <label htmlFor="artist">

@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
 import { addSong } from '../services/favoriteSongsAPI';
+import Loading from './Loading';
 
 class MusicCard extends Component {
   constructor(props) {
@@ -50,7 +51,7 @@ class MusicCard extends Component {
               checked={ check }
             />
           </label>
-          { loading && <p>Carregando...</p> }
+          { loading && <Loading /> }
         </div>
       </div>
     );
