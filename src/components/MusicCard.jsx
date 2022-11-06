@@ -6,9 +6,9 @@ import Loading from './Loading';
 class MusicCard extends Component {
   constructor(props) {
     super(props);
-
+    const { fav } = props;
     this.state = {
-      check: false,
+      check: fav,
       loading: false,
     };
   }
