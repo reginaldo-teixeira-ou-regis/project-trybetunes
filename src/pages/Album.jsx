@@ -16,10 +16,7 @@ class Album extends Component {
 
   searchMusics = async () => {
     const { match: { params: { id } } } = this.props;
-    console.log(id);
     const [infos, ...album] = await getMusics(id);
-    console.log(infos);
-    console.log(album);
     this.setState({
       album,
       infos,
@@ -31,16 +28,13 @@ class Album extends Component {
     return (
       <div data-testid="page-album">
         <Header />
-        Album
         <img src={ infos.artworkUrl100 } alt={ infos.artistName } />
         <h4 data-testid="album-name">{ infos.collectionName }</h4>
         <p data-testid="artist-name">{ infos.artistName }</p>
-        {
-          album
-            .map((artist) => (
-              <MusicCard key={ artist.trackId } { ...artist } />
-            ))
-        }
+        { album
+          .map((artist) => (
+            <MusicCard key={ artist.trackId } { ...artist } />
+          ))}
       </div>
     );
   }

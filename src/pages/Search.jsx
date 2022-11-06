@@ -39,7 +39,6 @@ class Search extends Component {
     return (
       <div data-testid="page-search">
         <Header />
-        Search
         { loading ? <p>Carregando...</p>
           : (
             <form>

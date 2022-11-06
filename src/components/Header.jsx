@@ -47,7 +47,6 @@ class Header extends Component {
         >
           Profile
         </NavLink>
-        Header
         { loading ? <p>Carregando...</p> : (
           <p data-testid="header-user-name">
             { userName.name }
