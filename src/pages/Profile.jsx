@@ -27,11 +27,32 @@ class Profile extends Component {
       <div data-testid="page-profile">
         <Header />
         Profile
+        <br />
         { loading && <Loading />}
-        <img src={ image } alt="perfil" data-testid="profile-image" />
-        <span>{name}</span>
-        <span>{email}</span>
-        <span>{description}</span>
+        <img
+          src={ image }
+          alt="profilePicture"
+          data-testid="profile-image"
+        />
+        <br />
+        <span>
+          {/* Nome:
+          {' '} */}
+          {name}
+        </span>
+        <br />
+        <span>
+          {/* E-mail:
+          {' '} */}
+          {email}
+        </span>
+        <br />
+        <span>
+          {/* Descrição:
+          {' '} */}
+          {description}
+        </span>
+        <br />
         <Link to="/profile/edit">Editar perfil</Link>
       </div>
     );
