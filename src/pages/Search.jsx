@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Loading from '../components/Loading';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
+import '../styles/Search.css';
+import { ReactComponent as NothingFound } from '../images/nothingFound.svg';
 
 class Search extends Component {
   state = {
@@ -38,22 +40,20 @@ class Search extends Component {
   render() {
     const { artist, loading, albums, artAlbs, disappearResult } = this.state;
     return (
-      <div data-testid="page-search">
+      <div className="pageSearch" data-testid="page-search">
         <Header />
-        { loading ? <Loading />
-          : (
+        <div>
+          <section className="search bgHeaderTop">
             <form>
-              <label htmlFor="artist">
-                <input
-                  type="text"
-                  name="artist"
-                  data-testid="search-artist-input"
-                  id="artist"
-                  placeholder="Digite o nome da banda ou artista"
-                  value={ artist }
-                  onChange={ this.onChangeInput }
-                />
-              </label>
+              <input
+                type="text"
+                name="artist"
+                data-testid="search-artist-input"
+                id="artist"
+                placeholder="Digite o nome da banda ou artista"
+                value={ artist }
+                onChange={ this.onChangeInput }
+              />
               <button
                 type="button"
                 data-testid="search-artist-button"
@@ -63,38 +63,45 @@ class Search extends Component {
                 Pesquisar
               </button>
             </form>
-          )}
-        <br />
-        {
-          disappearResult
-          && (
-            albums.length ? (
-              <div>
-                <h4>
-                  Resultado de álbuns de:
-                  {' '}
-                  {artAlbs}
-                </h4>
-                {
-                  albums
-                    .map((album) => (
-                      <div key={ album.artistId }>
-                        <img src={ album.artworkUrl100 } alt={ album.artistName } />
-                        <p>{ album.collectionName }</p>
-                        <p>{ album.artistName }</p>
-                        <Link
-                          to={ `/album/${album.collectionId}` }
-                          data-testid={ `link-to-album-${album.collectionId}` }
-                        >
-                          Detalhes
-                        </Link>
-                      </div>
-                    ))
-                }
+          </section>
+          <section className="containerSeach">
+            { loading ? <Loading />
+              : disappearResult
+            && (albums.length ? (
+              <div className="albumContainer">
+                <h2>
+                  Resultado de álbuns do(s) artista(s)/banda:
+                  <span className="searchName">{artAlbs}</span>
+                </h2>
+                <section className="containerAlbum">
+                  {
+                    albums
+                      .map((album) => (
+                        <div className="card" key={ album.artistId }>
+                          <img src={ album.artworkUrl100 } alt={ album.artistName } />
+                          <p className="nameAlbumCard">{ album.collectionName }</p>
+                          <p className="nameArtistCard">{ album.artistName }</p>
+                          <Link
+                            to={ `/album/${album.collectionId}` }
+                            data-testid={ `link-to-album-${album.collectionId}` }
+                            className="detailsCard"
+                          >
+                            More details click here
+                          </Link>
+                        </div>
+                      ))
+                  }
+                </section>
               </div>
-            ) : <p>Nenhum álbum foi encontrado</p>
-          )
-        }
+            ) : (
+              <div className="noResultFound">
+                <NothingFound />
+                <h3>Nenhum álbum foi encontrado</h3>
+              </div>
+            )
+            )}
+          </section>
+        </div>
       </div>
     );
   }

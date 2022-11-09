@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#root:has(.sideBar)>:first-child {
+  display: grid;
+  grid-template-columns: 250px calc(100% - 250px);
+}
+
+.logo {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  max-width: 250px;
+  min-width: 250px;
+  width: 100%;
+}
+
+.sideBar {
+  align-items: center;
+  background-color: white;
+  border-radius: 0;
+  border-right: 1px solid #003BE5;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  left: 0;
+  padding: 28px 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.link {
+  color: #C0C3C9;
+  text-decoration: none;
+}
+
+.active {
+  color: #444955;
+  font-size: 20px;
+}
+
+.active svg path {
+  fill: #444955;
+}
+
+.sideBar section {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.profile, .picture {
+  display: flex;
+  gap: 10px;
+  justify-content: baseline;
+}
+
+.picture img {
+  border: 1px solid #C0C3C9;
+  border-radius: 20px;
+  height: 40px;
+  max-width: 40px;
+  min-width: 40px;
+}
+
+.picture img, .picture p {
+  align-items: center;
+  display: flex;
+}
+
+.sec {
+  height: 40px;
+}
+
+.sideBar .loading img {
+  max-height: 40px;
+}

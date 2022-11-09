@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  color: #FFFFFF;
+  display: flex;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 21px;
+  text-align: center;
+}
+
+.containerFav {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border: 1px solid red;
+}
+
+.musicFav {
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  position: absolute;
+  align-items: center;
+  border: 1px solid red;
+  padding: 0 100px 0 400px;
+}

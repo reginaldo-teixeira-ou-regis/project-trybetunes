@@ -35,9 +35,9 @@ class MusicCard extends Component {
     const { trackName, previewUrl, trackId } = this.props;
     const { check, loading } = this.state;
     return (
-      <div>
-        <div>
-          <h2>{trackName}</h2>
+      <div className="musicContainer">
+        <li className="audioPlayerContainer">
+          <span className="trackName">{trackName}</span>
           <audio data-testid="audio-component" src={ previewUrl } controls>
             <track kind="captions" />
             O seu navegador não suporta o elemento
@@ -46,19 +46,39 @@ class MusicCard extends Component {
             <code>audio</code>
             .
           </audio>
-          <label htmlFor="favorita">
-            Favorita
+          <span>{ loading && <Loading /> }</span>
+          <label htmlFor={ trackId } className="label">
             <input
               type="checkbox"
-              name="favorita"
+              name="check"
+              id={ trackId }
+              className="favorita"
               data-testid={ `checkbox-music-${trackId}` }
-              id="favorita"
-              onChange={ this.favoriteMusics }
               checked={ check }
+              onChange={ this.favoriteMusics }
             />
+            <svg
+              className="mysvg"
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="black"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1"
+                d="M4.318 6.318a4.5 4.5 0 000
+                6.364L12 20.364l7.682-7.682a4.5
+                        4.5 0 00-6.364-6.364L12
+                        7.636l-1.318-1.318a4.5
+                        4.5 0 00-6.364 0z"
+              />
+            </svg>
           </label>
-          { loading && <Loading /> }
-        </div>
+        </li>
       </div>
     );
   }

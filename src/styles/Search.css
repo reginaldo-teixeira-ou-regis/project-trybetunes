@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.containerSeach {
+  display: flex;
+  height: calc(100% - 210px);
+  justify-content: center;
+  width: 100%;
+}
+
+.pageSearch {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.search input {
+  background-color: #ffffff80 50%;
+  border-radius: 23px;
+  height: 40px;
+  left: 504px;
+  text-align: center;
+  top: 97px;
+  width: 400px;
+}
+
+.search button {
+  background-color: #00d5e2;
+  border-radius: 23px;
+  color: white;
+  height: 40px;
+  left: 913px;
+  margin-left: 10px;
+  top: 97px;
+  width: 114px;
+}
+
+.albumContainer {
+  align-items: center;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
+  position: relative;
+  width: 100%;
+}
+
+.containerAlbum {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.card {
+  height: fit-content;
+  margin-top: 20px;
+  max-width: 145px;
+  min-width: 145px;
+  width: 100%;
+}
+
+.card img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.card .nameAlbumCard {
+  color: #3D495C;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 18px;
+  text-align: left;
+}
+
+.card .nameArtistCard {
+  color: #747d8b;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 14px;
+  text-align: left;
+}
+
+.detailsCard {
+  color: #003BE5;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 18px;
+  text-align: left;
+  text-decoration: none;
+}
+
+.albumContainer h2 {
+  color: #3D495C;
+  display: flex;
+  gap: 5px;
+  padding: 20px 0;
+  position: sticky;
+  z-index: 0;
+}
+
+.albumContainer h2 span {
+  color: #003BE5;
+}
+
+.noResultFound {
+  color: #3D495C;
+  font-size: 30px;
+  padding: 180px 0;
+  text-align: center;
+}

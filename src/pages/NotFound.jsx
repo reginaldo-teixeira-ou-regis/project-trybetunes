@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import '../styles/NotFound.css';
 
 class NotFound extends Component {
   render() {

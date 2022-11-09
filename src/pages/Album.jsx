@@ -5,6 +5,7 @@ import getMusics from '../services/musicsAPI';
 import MusicCard from '../components/MusicCard';
 import Loading from '../components/Loading';
 import { getFavoriteSongs } from '../services/favoriteSongsAPI';
+import '../styles/Album.css';
 
 class Album extends Component {
   state = {
@@ -42,18 +43,30 @@ class Album extends Component {
   render() {
     const { album, infos, loading, getFav } = this.state;
     return (
-      <div data-testid="page-album">
+      <div className="musicsContainer" data-testid="page-album">
         <Header />
-        <img src={ infos.artworkUrl100 } alt={ infos.artistName } />
-        <h4 data-testid="album-name">{ infos.collectionName }</h4>
-        <p data-testid="artist-name">{ infos.artistName }</p>
-        { loading ? <Loading /> : album
-          .map((artist) => {
-            const fav = getFav.some((music) => music.trackId === artist.trackId);
-            return (
-              <MusicCard key={ artist.trackId } { ...artist } fav={ fav } />
-            );
-          })}
+        <section className="sectionContainerMusic">
+          <div className="albumContainer bgHeaderTop">
+            <img
+              className="albumImg"
+              src={ infos.artworkUrl100 }
+              alt={ infos.artistName }
+            />
+            <div className="nameAlbumArtist">
+              <h4 data-testid="album-name">{ infos.collectionName }</h4>
+              <p data-testid="artist-name">{ infos.artistName }</p>
+            </div>
+          </div>
+          <ol className="olAlbumResults">
+            { loading ? <Loading /> : album
+              .map((artist) => {
+                const fav = getFav.some((music) => music.trackId === artist.trackId);
+                return (
+                  <MusicCard key={ artist.trackId } { ...artist } fav={ fav } />
+                );
+              })}
+          </ol>
+        </section>
       </div>
     );
   }

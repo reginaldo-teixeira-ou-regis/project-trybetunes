@@ -2,6 +2,8 @@ import { Component } from 'react';
 import PropTypes from 'prop-types';
 import { createUser } from '../services/userAPI';
 import Loading from '../components/Loading';
+import '../styles/Login.css';
+import logoImg from '../images/logo.svg';
 
 class Login extends Component {
   state = {
@@ -33,32 +35,35 @@ class Login extends Component {
   render() {
     const { userName, loading } = this.state;
     return (
-      <div data-testid="page-login">
-        Login
+      <div className="pageLogin" data-testid="page-login">
         { loading ? <Loading />
           : (
-            <form>
-              <label htmlFor="userName">
-                Nome
-                <input
-                  type="text"
-                  name="userName"
-                  data-testid="login-name-input"
-                  id="userName"
-                  placeholder="Digite seu nome"
-                  value={ userName }
-                  onChange={ this.onInputChange }
-                />
-              </label>
-              <button
-                type="button"
-                data-testid="login-submit-button"
-                disabled={ userName.length < +'3' }
-                onClick={ this.handleCreateUser }
-              >
-                Entrar
-              </button>
-            </form>
+            <section className="container">
+              <div className="loginLogo">
+                <img src={ logoImg } alt="logoLogin" />
+              </div>
+              <form className="formLogin">
+                <label htmlFor="userName">
+                  <input
+                    type="text"
+                    name="userName"
+                    data-testid="login-name-input"
+                    id="userName"
+                    placeholder="Digite seu nome"
+                    value={ userName }
+                    onChange={ this.onInputChange }
+                  />
+                </label>
+                <button
+                  type="button"
+                  data-testid="login-submit-button"
+                  disabled={ userName.length < +'3' }
+                  onClick={ this.handleCreateUser }
+                >
+                  Entrar
+                </button>
+              </form>
+            </section>
           )}
       </div>
     );
