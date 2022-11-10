@@ -25,34 +25,37 @@ class Profile extends Component {
   render() {
     const { infos: { description, image, name, email }, loading } = this.state;
     return (
-      <div data-testid="page-profile">
+      <main data-testid="page-profile">
         <Header />
-        <header className="bgHeaderTop"> </header>
-        { loading && <Loading />}
-        <section className="profileContainer">
-          <img
-            src={ image }
-            alt="profilePicture"
-            data-testid="profile-image"
-          />
-          <span>
-            {/* Nome:
-            {' '} */}
-            {name}
-          </span>
-          <span>
-            {/* E-mail:
-            {' '} */}
-            {email}
-          </span>
-          <span>
-            {/* Descrição:
-            {' '} */}
-            {description}
-          </span>
-          <Link to="/profile/edit">Editar perfil</Link>
-        </section>
-      </div>
+        <header className="pageProfile">
+          <section className="bgHeaderTop" />
+          { loading ? <Loading />
+            : (
+              <div className="profileContainer">
+                <img
+                  src={ image }
+                  alt="profilePicture"
+                  data-testid="profile-image"
+                />
+                <span>
+                  Nome:
+                  {' '}
+                  {name}
+                </span>
+                <span>
+                  E-mail:
+                  {' '}
+                  {email}
+                </span>
+                <span>
+                  Descrição:
+                  {' '}
+                  {description}
+                </span>
+                <Link to="/profile/edit">Editar perfil</Link>
+              </div>)}
+        </header>
+      </main>
     );
   }
 }

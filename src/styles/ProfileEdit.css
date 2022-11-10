@@ -1,1 +1,20 @@
-/* oi */
+.profileEditContainer {
+  align-items: center;
+  border: 1px solid red;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  height: 71.7vh;
+  justify-content: center;
+  width: 100%;
+}
+
+.pageProfileEdit:has( .loading ) .loading {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 180px);
+  justify-content: center;
+  width: 100%;
+}

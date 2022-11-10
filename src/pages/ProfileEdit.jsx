@@ -65,76 +65,80 @@ class ProfileEdit extends Component {
     return (
       <div data-testid="page-profile-edit">
         <Header />
-        <header className="bgHeaderTop"> </header>
-        { loading && <Loading />}
-        <form onChange={ this.validationForm }>
-          <label htmlFor="image">
-            <input
-              type="text"
-              name="image"
-              id="image"
-              data-testid="edit-input-image"
-              value={ image }
-              onChange={ this.onChangeInput }
-              required
-            />
-          </label>
-          <br />
-          <label htmlFor="name">
-            {/* Nome:
-            {' '} */}
-            <input
-              type="text"
-              name="name"
-              data-testid="edit-input-name"
-              id="name"
-              placeholder="Digite seu nome"
-              value={ name }
-              onChange={ this.onChangeInput }
-              required
-            />
-          </label>
-          <br />
-          <label htmlFor="email">
-            {/* E-mail:
-            {' '} */}
-            <input
-              type="email"
-              name="email"
-              data-testid="edit-input-email"
-              id="email"
-              placeholder="Digite seu Email"
-              value={ email }
-              onChange={ this.onChangeInput }
-              required
-            />
-          </label>
-          <br />
-          <label htmlFor="description">
-            {/* Descrição: */}
-            <br />
-            <textarea
-              name="description"
-              id="description"
-              cols="30"
-              rows="5"
-              data-testid="edit-input-description"
-              placeholder="Digite uma descrição"
-              value={ description }
-              onChange={ this.onChangeInput }
-              required
-            />
-          </label>
-          <br />
-          <button
-            type="button"
-            data-testid="edit-button-save"
-            disabled={ isDisabled }
-            onClick={ this.updateProfileEdit }
-          >
-            Salvar
-          </button>
-        </form>
+        <header className="pageProfileEdit">
+          <section className="bgHeaderTop" />
+          { loading ? <Loading /> : (
+            <form className="profileEditContainer" onChange={ this.validationForm }>
+              <label htmlFor="image">
+                Imagem/Url:
+                {' '}
+                <input
+                  type="text"
+                  name="image"
+                  id="image"
+                  data-testid="edit-input-image"
+                  value={ image }
+                  onChange={ this.onChangeInput }
+                  required
+                />
+              </label>
+              <br />
+              <label htmlFor="name">
+                Nome:
+                {' '}
+                <input
+                  type="text"
+                  name="name"
+                  data-testid="edit-input-name"
+                  id="name"
+                  placeholder="Digite seu nome"
+                  value={ name }
+                  onChange={ this.onChangeInput }
+                  required
+                />
+              </label>
+              <br />
+              <label htmlFor="email">
+                E-mail:
+                {' '}
+                <input
+                  type="email"
+                  name="email"
+                  data-testid="edit-input-email"
+                  id="email"
+                  placeholder="Digite seu Email"
+                  value={ email }
+                  onChange={ this.onChangeInput }
+                  required
+                />
+              </label>
+              <br />
+              <label htmlFor="description">
+                Descrição:
+                <br />
+                <textarea
+                  name="description"
+                  id="description"
+                  cols="30"
+                  rows="5"
+                  data-testid="edit-input-description"
+                  placeholder="Digite uma descrição"
+                  value={ description }
+                  onChange={ this.onChangeInput }
+                  required
+                />
+              </label>
+              <br />
+              <button
+                type="button"
+                data-testid="edit-button-save"
+                disabled={ isDisabled }
+                onClick={ this.updateProfileEdit }
+              >
+                Salvar
+              </button>
+            </form>)}
+        </header>
       </div>
     );
   }
