@@ -39,10 +39,8 @@ class Header extends Component {
             activeClassName="active"
             data-testid="link-to-search"
           >
-            <h3 className="profile">
-              <Lupa />
-              Search
-            </h3>
+            <Lupa />
+            Search
           </NavLink>
           <NavLink
             className="link"
@@ -50,10 +48,8 @@ class Header extends Component {
             activeClassName="active"
             data-testid="link-to-favorites"
           >
-            <h3 className="profile">
-              <Star />
-              Favorites
-            </h3>
+            <Star />
+            Favorites
           </NavLink>
           <NavLink
             className="link"
@@ -61,10 +57,8 @@ class Header extends Component {
             activeClassName="active"
             data-testid="link-to-profile"
           >
-            <h3 className="profile">
-              <Profile />
-              Profile
-            </h3>
+            <Profile />
+            Profile
           </NavLink>
         </section>
         <section className="sec">
@@ -83,7 +77,3 @@ class Header extends Component {
 }
 
 export default Header;
-
-/* background-image: url('images/BG\ AZUL.png');
-  background-size: 117%; */
-/* background-image: linear-gradient(to bottom right, #003BE5, #00D5E2); */

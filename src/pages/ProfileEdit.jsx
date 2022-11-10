@@ -65,7 +65,7 @@ class ProfileEdit extends Component {
     return (
       <div data-testid="page-profile-edit">
         <Header />
-        Editar perfil
+        <header className="bgHeaderTop"> </header>
         { loading && <Loading />}
         <form onChange={ this.validationForm }>
           <label htmlFor="image">

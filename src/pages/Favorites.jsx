@@ -27,18 +27,20 @@ class Favorites extends Component {
     return (
       <main className="containerFav">
         <Header />
-        <div className="bgHeaderTop title">Músicas Favoritas</div>
-        <section className="musicFav">
-          {
-            musicsFav
-              .map((music) => (
-                <MusicCard
-                  key={ music.trackId }
-                  { ...music }
-                  fav
-                  callBack={ this.listFavorites }
-                />))
-          }
+        <section>
+          <div className="bgHeaderTop title">Músicas Favoritas</div>
+          <section className="musicFav">
+            {
+              musicsFav
+                .map((music) => (
+                  <MusicCard
+                    key={ music.trackId }
+                    { ...music }
+                    fav
+                    callBack={ this.listFavorites }
+                  />))
+            }
+          </section>
         </section>
       </main>
     );

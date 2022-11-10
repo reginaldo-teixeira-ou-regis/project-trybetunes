@@ -1,48 +1,36 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 .pageLogin {
   align-items: center;
-  background-image: linear-gradient(to bottom right, #00D5E2, #003BE5);
+  background: url('../images/BG\ AZUL.png') , linear-gradient(to bottom right, #003BE5, #00D5E2);
+  background-position: center , center;
+  background-repeat: no-repeat , no-repeat;
+  background-size: cover , cover;
   display: flex;
   height: 100vh;
   justify-content: center;
 }
 
 .container {
-  align-items: flex-end;
+  align-items: center;
   background-color: #FFFFFF;
   border-radius: 20px;
   display: flex;
-  height: 450px;
-  left: 265px;
-  padding-bottom: 100px;
-  top: 135px;
-  width: 750px;
+  flex-direction: column;
+  height: 400px;
+  justify-content: center;
+  width: 600px;
 }
-
-.loginLogo {
-  display: flex;
-  margin-bottom: 150px;
-  margin-left: 270px;
-  position: absolute;
-}
-
 
 .formLogin {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  margin-top: 10vh;
 }
 
 .formLogin input, .formLogin button {
   border: 1px solid #003be5;
   border-radius: 100px;
   height: 40px;
-  margin-left: 175px;
   max-width: 400px;
   min-width: 400px;
   text-align: center;

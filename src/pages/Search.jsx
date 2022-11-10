@@ -5,6 +5,7 @@ import Loading from '../components/Loading';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 import '../styles/Search.css';
 import { ReactComponent as NothingFound } from '../images/nothingFound.svg';
+import '../styles/NotFound.css';
 
 class Search extends Component {
   state = {
@@ -64,7 +65,7 @@ class Search extends Component {
               </button>
             </form>
           </section>
-          <section className="containerSeach">
+          <section className="containerSearch">
             { loading ? <Loading />
               : disappearResult
             && (albums.length ? (
@@ -78,16 +79,15 @@ class Search extends Component {
                     albums
                       .map((album) => (
                         <div className="card" key={ album.artistId }>
-                          <img src={ album.artworkUrl100 } alt={ album.artistName } />
-                          <p className="nameAlbumCard">{ album.collectionName }</p>
-                          <p className="nameArtistCard">{ album.artistName }</p>
                           <Link
                             to={ `/album/${album.collectionId}` }
                             data-testid={ `link-to-album-${album.collectionId}` }
                             className="detailsCard"
                           >
-                            More details click here
+                            <img src={ album.artworkUrl100 } alt={ album.artistName } />
                           </Link>
+                          <p className="nameAlbumCard">{ album.collectionName }</p>
+                          <p className="nameArtistCard">{ album.artistName }</p>
                         </div>
                       ))
                   }

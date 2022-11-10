@@ -1,8 +1,17 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .bgHeaderTop {
   align-items: center;
-  background-image: linear-gradient(to bottom right, #00D5E2, #003BE5);
+  background: url('../images/BG\ AZUL.png') , linear-gradient(to bottom right, #003BE5, #00D5E2);
+  background-position: center , center;
+  background-repeat: no-repeat , no-repeat;
+  background-size: cover , cover;
   display: flex;
-  height: 210px;
+  height: 180px;
   justify-content: center;
   position: sticky;
   top: 0;

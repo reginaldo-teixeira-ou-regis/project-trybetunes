@@ -27,34 +27,31 @@ class Profile extends Component {
     return (
       <div data-testid="page-profile">
         <Header />
-        Profile
-        <br />
+        <header className="bgHeaderTop"> </header>
         { loading && <Loading />}
-        <img
-          src={ image }
-          alt="profilePicture"
-          data-testid="profile-image"
-        />
-        <br />
-        <span>
-          {/* Nome:
-          {' '} */}
-          {name}
-        </span>
-        <br />
-        <span>
-          {/* E-mail:
-          {' '} */}
-          {email}
-        </span>
-        <br />
-        <span>
-          {/* Descrição:
-          {' '} */}
-          {description}
-        </span>
-        <br />
-        <Link to="/profile/edit">Editar perfil</Link>
+        <section className="profileContainer">
+          <img
+            src={ image }
+            alt="profilePicture"
+            data-testid="profile-image"
+          />
+          <span>
+            {/* Nome:
+            {' '} */}
+            {name}
+          </span>
+          <span>
+            {/* E-mail:
+            {' '} */}
+            {email}
+          </span>
+          <span>
+            {/* Descrição:
+            {' '} */}
+            {description}
+          </span>
+          <Link to="/profile/edit">Editar perfil</Link>
+        </section>
       </div>
     );
   }

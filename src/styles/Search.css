@@ -1,12 +1,6 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-.containerSeach {
+.containerSearch {
   display: flex;
-  height: calc(100% - 210px);
+  height: calc(100% - 180px);
   justify-content: center;
   width: 100%;
 }
@@ -19,6 +13,7 @@
 
 .search input {
   background-color: #ffffff80 50%;
+  border: none;
   border-radius: 23px;
   height: 40px;
   left: 504px;
@@ -58,7 +53,6 @@
 
 .card {
   height: fit-content;
-  margin-top: 20px;
   max-width: 145px;
   min-width: 145px;
   width: 100%;
@@ -87,15 +81,10 @@
   text-align: left;
 }
 
-.detailsCard {
-  color: #003BE5;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0;
-  line-height: 18px;
-  text-align: left;
-  text-decoration: none;
+.detailsCard:hover img {
+  border: 5px solid #003BE5;
 }
+
 
 .albumContainer h2 {
   color: #3D495C;
@@ -108,11 +97,4 @@
 
 .albumContainer h2 span {
   color: #003BE5;
-}
-
-.noResultFound {
-  color: #3D495C;
-  font-size: 30px;
-  padding: 180px 0;
-  text-align: center;
 }

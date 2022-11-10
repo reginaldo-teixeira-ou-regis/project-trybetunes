@@ -1,9 +1,8 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-. {
+.noResultFound {
+  align-items: center;
+  color: #3D495C;
   display: flex;
+  flex-direction: column;
+  font-size: 30px;
+  justify-content: center;
 }
