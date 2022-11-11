@@ -33,26 +33,27 @@ class Profile extends Component {
             : (
               <div className="profileContainer">
                 <img
+                  className="imgProfile"
                   src={ image }
                   alt="profilePicture"
                   data-testid="profile-image"
                 />
-                <span>
-                  Nome:
+                <div>
+                  <h4>Nickname</h4>
                   {' '}
-                  {name}
-                </span>
-                <span>
-                  E-mail:
+                  <p className="valueInput">{name}</p>
+                </div>
+                <div>
+                  <h4>E-mail</h4>
                   {' '}
-                  {email}
-                </span>
-                <span>
-                  Descrição:
+                  <p className="valueInput">{email}</p>
+                </div>
+                <div>
+                  <h4>Descrição</h4>
                   {' '}
-                  {description}
-                </span>
-                <Link to="/profile/edit">Editar perfil</Link>
+                  <p className="valueInput descriptionScroll">{description}</p>
+                </div>
+                <Link className="btnProfileEdit" to="/profile/edit">EDITAR PERFIL</Link>
               </div>)}
         </header>
       </main>

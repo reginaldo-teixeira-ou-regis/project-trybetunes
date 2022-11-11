@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Loading from '../components/Loading';
 import { getUser, updateUser } from '../services/userAPI';
 import '../styles/ProfileEdit.css';
+/* import Perfil from '../images/images23.png'; */
 
 class ProfileEdit extends Component {
   state = {
@@ -69,14 +70,18 @@ class ProfileEdit extends Component {
           <section className="bgHeaderTop" />
           { loading ? <Loading /> : (
             <form className="profileEditContainer" onChange={ this.validationForm }>
-              <label htmlFor="image">
-                Imagem/Url:
-                {' '}
+              <img
+                className="imgProfile"
+                src={ image }
+                alt="profilePicture"
+              />
+              <label className="linkImg" htmlFor="image">
                 <input
                   type="text"
                   name="image"
                   id="image"
                   data-testid="edit-input-image"
+                  placeholder="Insira um link"
                   value={ image }
                   onChange={ this.onChangeInput }
                   required
@@ -84,58 +89,59 @@ class ProfileEdit extends Component {
               </label>
               <br />
               <label htmlFor="name">
-                Nome:
-                {' '}
+                <h4>Nickname</h4>
+                <p>Fique à vontade para usar seu nome social</p>
                 <input
+                  maxLength="15"
                   type="text"
                   name="name"
-                  data-testid="edit-input-name"
                   id="name"
-                  placeholder="Digite seu nome"
+                  data-testid="edit-input-name"
+                  className="formItens"
+                  placeholder="Digite seu nome / apelido"
                   value={ name }
                   onChange={ this.onChangeInput }
                   required
                 />
               </label>
-              <br />
               <label htmlFor="email">
-                E-mail:
-                {' '}
+                <h4>E-mail</h4>
+                <p>Escolha um e-mail que consulte diariamente</p>
                 <input
                   type="email"
                   name="email"
-                  data-testid="edit-input-email"
                   id="email"
-                  placeholder="Digite seu Email"
+                  data-testid="edit-input-email"
+                  className="formItens"
+                  placeholder="seu_nome@email.com.br"
                   value={ email }
                   onChange={ this.onChangeInput }
                   required
                 />
               </label>
-              <br />
               <label htmlFor="description">
-                Descrição:
-                <br />
+                <h4>Descrição</h4>
                 <textarea
                   name="description"
                   id="description"
                   cols="30"
                   rows="5"
                   data-testid="edit-input-description"
-                  placeholder="Digite uma descrição"
+                  className="formItens"
+                  placeholder="Sobre mim"
                   value={ description }
                   onChange={ this.onChangeInput }
                   required
                 />
               </label>
-              <br />
               <button
                 type="button"
+                className="btnSavedEdit"
                 data-testid="edit-button-save"
                 disabled={ isDisabled }
                 onClick={ this.updateProfileEdit }
               >
-                Salvar
+                SALVAR
               </button>
             </form>)}
         </header>

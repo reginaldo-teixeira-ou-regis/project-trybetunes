@@ -1,13 +1,58 @@
 .profileEditContainer {
-  align-items: center;
-  border: 1px solid red;
+  align-items: flex-start;
   color: black;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 25px;
   height: 71.7vh;
   justify-content: center;
+  margin: 0 auto;
+  padding-bottom: 10%;
+  padding-left: 7%;
+  width: 50%;
+}
+
+.profileEditContainer p {
+  color: #3D495C;
+  font-size: 12px;
+}
+
+.linkImg input {
+  height: 20px;
+  left: 275px;
+  max-width: 120px;
+  position: absolute;
+  text-align: center;
+  top: 260px;
+  z-index: 4;
+}
+
+.profileEditContainer input, .profileEditContainer textarea {
+  border: none;
+  border-bottom: 1px solid gray;
+  border-radius: 5px;
+  margin-top: 2px;
+  padding: 5px;
+}
+
+.profileEditContainer label, .profileEditContainer input, .profileEditContainer textarea {
   width: 100%;
+}
+
+.btnSavedEdit {
+  background-color: white;
+  border: 2px solid #003BE5;
+  border-radius: 50px;
+  color: #003BE5;
+  font-weight: 700;
+  padding: 10px 40px;
+  text-decoration: none;
+}
+
+.btnSavedEdit:hover {
+  background-color: #003BE5;
+  color: white;
+  transition: 1s;
 }
 
 .pageProfileEdit:has( .loading ) .loading {
