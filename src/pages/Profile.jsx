@@ -53,7 +53,12 @@ class Profile extends Component {
                   {' '}
                   <p className="valueInput descriptionScroll">{description}</p>
                 </div>
-                <Link className="btnProfileEdit" to="/profile/edit">EDITAR PERFIL</Link>
+                <div className="btn">
+                  <Link exact className="btnProfileEdit" to="/profile/edit">
+                    EDITAR PERFIL
+                  </Link>
+                  <Link exact className="btnSair" to="/">SAIR</Link>
+                </div>
               </div>)}
         </header>
       </main>

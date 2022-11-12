@@ -115,7 +115,6 @@ class ProfileEdit extends Component {
                   placeholder="seu_nome@email.com.br"
                   value={ email }
                   onChange={ this.onChangeInput }
-                  required
                 />
               </label>
               <label htmlFor="description">

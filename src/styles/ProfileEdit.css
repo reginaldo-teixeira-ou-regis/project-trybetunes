@@ -52,7 +52,7 @@
 .btnSavedEdit:hover {
   background-color: #003be5;
   color: white;
-  transition: 1s;
+  transition: 0.5s;
 }
 
 .pageProfileEdit:has( .loading ) .loading {
