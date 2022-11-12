@@ -64,7 +64,7 @@
 }
 
 .card .nameAlbumCard {
-  color: #3D495C;
+  color: #3d495c;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0;
@@ -82,12 +82,12 @@
 }
 
 .detailsCard:hover img {
-  border: 5px solid #003BE5;
+  border: 5px solid #003be5;
 }
 
 
 .albumContainer h2 {
-  color: #3D495C;
+  color: #3d495c;
   display: flex;
   gap: 5px;
   padding: 20px 0;
@@ -96,5 +96,5 @@
 }
 
 .albumContainer h2 span {
-  color: #003BE5;
+  color: #003be5;
 }

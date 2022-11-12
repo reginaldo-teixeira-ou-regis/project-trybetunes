@@ -35,8 +35,7 @@
   width: 25px;
 }
 
-audio::-webkit-media-controls-play-button,
-audio::-webkit-media-controls-panel {
+audio::-webkit-media-controls-play-button, audio::-webkit-media-controls-panel {
   background-color: white;
 }
 

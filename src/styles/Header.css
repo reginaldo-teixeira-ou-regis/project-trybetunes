@@ -1,4 +1,5 @@
-#root:has(.sideBar)>:first-child {
+/* stylelint-disable-next-line selector-max-specificity */
+#root:has( .sideBar ) > :first-child {
   display: grid;
   grid-template-columns: 211px calc(100% - 211px);
 }
@@ -17,7 +18,7 @@
   align-items: center;
   background-color: white;
   border-radius: 0;
-  border-right: 1px solid #003BE5;
+  border-right: 1px solid #003be5;
   display: flex;
   flex-direction: column;
   font-size: 16px;
@@ -34,7 +35,7 @@
 
 .link {
   align-items: center;
-  color: #C0C3C9;
+  color: #c0c3c9;
   display: flex;
   font-size: 16px;
   font-weight: 400;
@@ -64,7 +65,7 @@
 }
 
 .picture img {
-  border: 1px solid #C0C3C9;
+  border: 1px solid #c0c3c9;
   border-radius: 20px;
   height: 40px;
   max-width: 40px;

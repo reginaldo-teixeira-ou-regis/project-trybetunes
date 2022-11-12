@@ -6,7 +6,7 @@
 
 .bgHeaderTop {
   align-items: center;
-  background: url('../images/BG\ AZUL.png') , linear-gradient(to bottom right, #003BE5, #00D5E2);
+  background: url('../images/BG\ AZUL.png') , linear-gradient(to bottom right, #003be5, #00d5e2);
   background-position: center , center;
   background-repeat: no-repeat , no-repeat;
   background-size: cover , cover;
