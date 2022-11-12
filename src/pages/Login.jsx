@@ -45,11 +45,11 @@ class Login extends Component {
               <form className="formLogin">
                 <label htmlFor="userName">
                   <input
+                    maxLength="15"
                     type="text"
                     name="userName"
                     data-testid="login-name-input"
                     id="userName"
-                    maxLength="15"
                     placeholder="Digite seu nome"
                     value={ userName }
                     onChange={ this.onInputChange }
