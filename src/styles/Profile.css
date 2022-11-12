@@ -28,8 +28,12 @@
 .descriptionScroll {
   height: 100px;
   max-width: 400px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
+
+/* .descriptionScroll::-webkit-scrollbar {
+  width: 0;
+} */
 
 .btnProfileEdit {
   background-color: white;

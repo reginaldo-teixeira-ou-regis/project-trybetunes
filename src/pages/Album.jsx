@@ -57,20 +57,21 @@ class Album extends Component {
               <p data-testid="artist-name">{ infos.artistName }</p>
             </div>
           </div>
-          { loading ? <Loading />
-            : (
-              <section>
-                <ol className="olAlbumResults">
-                  { album
+          <section>
+            <ol className="olAlbumResults">
+              { loading ? <Loading />
+                : (
+                  album
                     .map((artist) => {
                       const fav = getFav
                         .some((music) => music.trackId === artist.trackId);
                       return (
                         <MusicCard key={ artist.trackId } { ...artist } fav={ fav } />
                       );
-                    })}
-                </ol>
-              </section>)}
+                    })
+                )}
+            </ol>
+          </section>
         </section>
       </div>
     );

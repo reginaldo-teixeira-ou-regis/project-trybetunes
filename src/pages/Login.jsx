@@ -23,7 +23,7 @@ class Login extends Component {
     this.setState({
       loading: true,
     });
-    await createUser({ name: userName });
+    await createUser({ name: userName, image: 'https://www.eleconomista.com.mx/export/sites/eleconomista/arte/avatar-usuario-generico.png_423682103.png' });
     this.goBackHome('/search');
   };
 

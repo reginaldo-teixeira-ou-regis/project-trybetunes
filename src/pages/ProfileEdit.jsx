@@ -4,7 +4,6 @@ import Header from '../components/Header';
 import Loading from '../components/Loading';
 import { getUser, updateUser } from '../services/userAPI';
 import '../styles/ProfileEdit.css';
-/* import Perfil from '../images/images23.png'; */
 
 class ProfileEdit extends Component {
   state = {

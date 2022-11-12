@@ -33,11 +33,11 @@
   width: 100%;
 }
 
-.olAlbumResults:has( .loading ) .loading {
+.olAlbumResults:has( > .loading ) {
   align-items: center;
   display: flex;
-  flex-direction: column;
-  height: calc(100% - 180px);
+  flex-direction: row;
+  height: calc(100vh - 180px);
   justify-content: center;
   width: 100%;
 }
