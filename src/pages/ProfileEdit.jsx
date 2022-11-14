@@ -88,10 +88,10 @@ class ProfileEdit extends Component {
               </label>
               <br />
               <label htmlFor="name">
-                <h4>Nickname</h4>
+                <h4>Nome</h4>
                 <p>Fique à vontade para usar seu nome social</p>
                 <input
-                  maxLength="15"
+                  maxLength="10"
                   type="text"
                   name="name"
                   id="name"

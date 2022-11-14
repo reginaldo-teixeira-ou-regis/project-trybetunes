@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { getUser } from '../services/userAPI';
 import Loading from './Loading';
 import '../styles/Header.css';
@@ -40,7 +40,7 @@ class Header extends Component {
             data-testid="link-to-search"
           >
             <Lupa />
-            Search
+            Pesquisar
           </NavLink>
           <NavLink
             className="link"
@@ -49,7 +49,7 @@ class Header extends Component {
             data-testid="link-to-favorites"
           >
             <Star />
-            Favorites
+            Favoritas
           </NavLink>
           <NavLink
             className="link"
@@ -58,7 +58,7 @@ class Header extends Component {
             data-testid="link-to-profile"
           >
             <Profile />
-            Profile
+            Perfil
           </NavLink>
         </section>
         <section className="sec">
@@ -68,6 +68,7 @@ class Header extends Component {
               <p data-testid="header-user-name">
                 { userName.name }
               </p>
+              <Link exact className="btnSair" to="/">SAIR</Link>
             </h3>
           )}
         </section>

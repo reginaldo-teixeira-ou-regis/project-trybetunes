@@ -39,7 +39,7 @@ class Profile extends Component {
                   data-testid="profile-image"
                 />
                 <div>
-                  <h4>Nickname</h4>
+                  <h4>Nome</h4>
                   {' '}
                   <p className="valueInput">{name}</p>
                 </div>
@@ -57,7 +57,6 @@ class Profile extends Component {
                   <Link exact className="btnProfileEdit" to="/profile/edit">
                     EDITAR PERFIL
                   </Link>
-                  <Link exact className="btnSair" to="/">SAIR</Link>
                 </div>
               </div>)}
         </header>

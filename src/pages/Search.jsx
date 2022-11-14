@@ -71,7 +71,7 @@ class Search extends Component {
             && (albums.length ? (
               <div className="albumContainer">
                 <h2>
-                  Resultado de álbuns do(s) artista(s)/banda:
+                  Resultado de álbuns do(s) artista(s)/banda(s):
                   <span className="searchName">{artAlbs}</span>
                 </h2>
                 <section className="containerAlbum">

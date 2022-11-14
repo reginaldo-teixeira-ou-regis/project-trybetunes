@@ -45,7 +45,7 @@ class Login extends Component {
               <form className="formLogin">
                 <label htmlFor="userName">
                   <input
-                    maxLength="15"
+                    maxLength="10"
                     type="text"
                     name="userName"
                     data-testid="login-name-input"

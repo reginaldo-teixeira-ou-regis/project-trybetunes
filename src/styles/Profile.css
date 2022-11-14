@@ -53,24 +53,6 @@
   transition: 0.5s;
 }
 
-.btnSair {
-  background-color: white;
-  border: 2px solid red;
-  border-radius: 50px;
-  color: red;
-  font-size: 15px;
-  font-weight: 500;
-  padding: 10px 30px;
-  text-decoration: none;
-  justify-items: flex-end;
-}
-
-.btnSair:hover {
-  background-color: red;
-  color: white;
-  transition: 0.5s;
-}
-
 .pageProfile:has( .loading ) .loading {
   align-items: center;
   display: flex;
