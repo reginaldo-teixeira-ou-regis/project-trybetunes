@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Loading from '../components/Loading';
 import { getUser } from '../services/userAPI';
 import '../styles/Profile.css';
+import Footer from './Footer';
 
 class Profile extends Component {
   state = {
@@ -59,6 +60,7 @@ class Profile extends Component {
                   </Link>
                 </div>
               </div>)}
+          <Footer />
         </header>
       </main>
     );

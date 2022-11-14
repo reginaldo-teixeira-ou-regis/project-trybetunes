@@ -59,6 +59,7 @@
 }
 
 .picture {
+  align-items: center;
   display: flex;
   gap: 10px;
   justify-content: baseline;
@@ -83,4 +84,23 @@
 
 .sideBar .loading img {
   max-height: 40px;
+}
+
+.btnSair {
+  align-items: center;
+  background-color: white;
+  border: 1px solid red;
+  border-radius: 50%;
+  color: red;
+  display: flex;
+  font-size: 12px;
+  height: 20px;
+  padding: 10px 5px;
+  text-decoration: none;
+}
+
+.btnSair:hover {
+  background-color: red;
+  color: white;
+  transition: 0.5s;
 }

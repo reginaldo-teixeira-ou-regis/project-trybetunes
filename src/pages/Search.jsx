@@ -6,6 +6,7 @@ import searchAlbumsAPI from '../services/searchAlbumsAPI';
 import '../styles/Search.css';
 import { ReactComponent as NothingFound } from '../images/nothingFound.svg';
 import '../styles/NotFound.css';
+import Footer from './Footer';
 
 class Search extends Component {
   state = {
@@ -101,6 +102,7 @@ class Search extends Component {
             )
             )}
           </section>
+          <Footer />
         </div>
       </div>
     );

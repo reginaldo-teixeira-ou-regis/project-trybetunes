@@ -2,6 +2,7 @@
   display: flex;
   height: calc(100% - 180px);
   justify-content: center;
+  position: relative;
   width: 100%;
 }
 
@@ -49,6 +50,7 @@
   flex-wrap: wrap;
   gap: 25px;
   justify-content: center;
+  margin-bottom: 30px;
 }
 
 .card {
@@ -97,22 +99,4 @@
 
 .albumContainer h2 span {
   color: #003be5;
-}
-
-.btnSair {
-  align-items: center;
-  background-color: white;
-  border: 1px solid red;
-  border-radius: 100%;
-  color: red;
-  display: flex;
-  font-size: 10px;
-  padding: 5px;
-  text-decoration: none;
-}
-
-.btnSair:hover {
-  background-color: red;
-  color: white;
-  transition: 0.5s;
 }

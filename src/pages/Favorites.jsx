@@ -4,6 +4,7 @@ import Loading from '../components/Loading';
 import MusicCard from '../components/MusicCard';
 import { getFavoriteSongs } from '../services/favoriteSongsAPI';
 import '../styles/Favorites.css';
+import Footer from './Footer';
 
 class Favorites extends Component {
   state = {
@@ -49,6 +50,7 @@ class Favorites extends Component {
                       />))
                 }
               </section>)}
+          <Footer />
         </section>
       </main>
     );

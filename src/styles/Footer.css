@@ -1,0 +1,57 @@
+.containerFooter {
+  align-items: center;
+  background: url('../images/BG\ AZUL.png') , linear-gradient(to bottom right, #003be5, #00d5e2);
+  background-position: center , center;
+  background-repeat: no-repeat , no-repeat;
+  background-size: cover , cover;
+  bottom: 0;
+  color: white;
+  display: flex;
+  font-weight: 700;
+  height: 30px;
+  line-height: 21px;
+  position: fixed;
+  width: 100%;
+}
+
+.copyRightContainer {
+  align-items: flex-end;
+  display: flex;
+  gap: 8px;
+  margin: 3%;
+  margin-right: 11%;
+}
+
+.copyRight {
+  align-items: flex-end;
+  display: flex;
+}
+
+.iconCopyRight {
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+}
+
+.containerIcoms {
+  align-items: flex-end;
+}
+
+.iconsSocial {
+  align-items: center;
+  display: flex;
+  gap: 5px;
+}
+
+.icons {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  gap: 7px;
+  justify-content: center;
+}
+
+.gitHubIcon {
+  font-size: 25px;
+}

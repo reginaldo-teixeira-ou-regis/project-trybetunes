@@ -6,6 +6,7 @@ import MusicCard from '../components/MusicCard';
 import Loading from '../components/Loading';
 import { getFavoriteSongs } from '../services/favoriteSongsAPI';
 import '../styles/Album.css';
+import Footer from './Footer';
 
 class Album extends Component {
   state = {
@@ -57,7 +58,7 @@ class Album extends Component {
               <p data-testid="artist-name">{ infos.artistName }</p>
             </div>
           </div>
-          <section>
+          <section className="albumsMusics">
             <ol className="olAlbumResults">
               { loading ? <Loading />
                 : (
@@ -72,6 +73,7 @@ class Album extends Component {
                 )}
             </ol>
           </section>
+          <Footer />
         </section>
       </div>
     );
