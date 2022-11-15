@@ -33,11 +33,12 @@ class MusicCard extends Component {
   };
 
   render() {
-    const { trackName, previewUrl, trackId } = this.props;
+    const { trackName, previewUrl, trackId, artistName } = this.props;
     const { check, loading } = this.state;
     return (
       <div className="musicContainer">
         <li className="audioPlayerContainer">
+          <span className="artistName">{ artistName }</span>
           <span className="trackName">{trackName}</span>
           <audio data-testid="audio-component" src={ previewUrl } controls>
             <track kind="captions" />
@@ -87,6 +88,7 @@ class MusicCard extends Component {
 
 MusicCard.propTypes = {
   trackName: PropTypes.string.isRequired,
+  artistName: PropTypes.string.isRequired,
   previewUrl: PropTypes.string.isRequired,
   trackId: PropTypes.number.isRequired,
   fav: PropTypes.bool.isRequired,

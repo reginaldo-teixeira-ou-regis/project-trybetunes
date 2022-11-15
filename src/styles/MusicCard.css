@@ -4,6 +4,13 @@
   text-align: center;
 }
 
+.artistName {
+  color: gray;
+  font-size: 10px;
+  text-align: left;
+  width: 150px;
+}
+
 .trackName {
   font-size: 12px;
   text-align: left;

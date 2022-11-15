@@ -20,10 +20,12 @@ class Footer extends Component {
         <div className="containerIcoms">
           <span className="iconsSocial">
             Reginaldo Teixeira
-            <span className="icons">
-              <GrLinkedin href="https://www.linkedin.com/in/reginaldoteixeiraouregis/" />
-              <VscGithub className="gitHubIcon" href="https://github.com/reginaldo-teixeira-ou-regis" />
-            </span>
+            <a className="LinkedinIcon" href="https://www.linkedin.com/in/reginaldoteixeiraouregis/" target="_blank" rel="noopener noreferrer">
+              <GrLinkedin />
+            </a>
+            <a className="gitHubIcon" href="https://github.com/reginaldo-teixeira-ou-regis" target="_blank" rel="noopener noreferrer">
+              <VscGithub />
+            </a>
           </span>
         </div>
       </div>
