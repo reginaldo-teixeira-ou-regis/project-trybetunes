@@ -1,0 +1,113 @@
+.containerSearch {
+  display: flex;
+  height: calc(100% - 180px);
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.pageSearch {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.search input {
+  background-color: #ffffff80 50%;
+  border: none;
+  border-radius: 23px;
+  height: 40px;
+  left: 504px;
+  text-align: center;
+  top: 97px;
+  width: 400px;
+}
+
+.search button {
+  align-items: center;
+  background-color: white;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+  display: flex;
+  font-weight: 700;
+  height: 40px;
+  justify-content: center;
+  left: 913px;
+  margin-left: 5px;
+  top: 97px;
+  width: 40px;
+}
+
+.search button:hover {
+  background: url('../images/BG\ AZUL.png') , linear-gradient(to bottom right, #003be5, #00d5e2);
+  border: 1px solid white;
+  transition: 0.5s;
+}
+
+.albumContainer {
+  align-items: center;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
+  position: relative;
+  width: 100%;
+}
+
+.containerAlbum {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.card {
+  height: fit-content;
+  max-width: 145px;
+  min-width: 145px;
+  width: 100%;
+}
+
+.card img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.card .nameAlbumCard {
+  color: #3d495c;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 18px;
+  text-align: left;
+}
+
+.card .nameArtistCard {
+  color: #747d8b;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 14px;
+  text-align: left;
+}
+
+.detailsCard:hover img {
+  border: 5px solid #003be5;
+}
+
+
+.albumContainer h2 {
+  color: #3d495c;
+  display: flex;
+  gap: 5px;
+  padding: 20px 0;
+  position: sticky;
+  z-index: 0;
+}
+
+.albumContainer h2 span {
+  color: #003be5;
+}

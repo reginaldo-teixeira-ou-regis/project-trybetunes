@@ -1,0 +1,50 @@
+.albumImg {
+  border-radius: 12px;
+  margin-left: 10%;
+  width: 150px;
+}
+
+.musicsContainer .bgHeaderTop {
+  height: 180px;
+}
+
+.nameAlbumArtist {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  height: 100%;
+  justify-content: center;
+  margin-right: 10%;
+  width: 54%;
+}
+
+.nameAlbumArtist p {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.olAlbumResults {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+}
+
+.olAlbumResults:has( > .loading ) {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 180px);
+  justify-content: center;
+  width: 100%;
+}
+
+.albumsMusics {
+  margin-bottom: 30px;
+}
+
+/* .artistNameDisplayNone {
+  display: none;
+} */

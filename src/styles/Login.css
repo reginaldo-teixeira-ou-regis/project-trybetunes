@@ -1,0 +1,56 @@
+.pageLogin {
+  align-items: center;
+  background: url('../images/BG\ AZUL.png') , linear-gradient(to bottom right, #003be5, #00d5e2);
+  background-position: center , center;
+  background-repeat: no-repeat , no-repeat;
+  background-size: cover , cover;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+.container {
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  justify-content: center;
+  width: 600px;
+}
+
+.formLogin {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 10vh;
+}
+
+.formLogin input, .formLogin button {
+  border: 1px solid #003be5;
+  border-radius: 100px;
+  height: 40px;
+  max-width: 400px;
+  min-width: 400px;
+  text-align: center;
+  width: 100%;
+}
+
+.formLogin input::placeholder {
+  color: #003be5;
+}
+
+.formLogin button {
+  background-color: #003be5;
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.formLogin button:hover {
+  background: url('../images/BG\ AZUL.png') , linear-gradient(to bottom right, #003be5, #00d5e2);
+  border: 2px solid #003be5;
+  color: white;
+  transition: 2s;
+}
