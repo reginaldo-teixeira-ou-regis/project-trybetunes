@@ -38,7 +38,7 @@ class MusicCard extends Component {
     return (
       <div className="musicContainer">
         <li className="audioPlayerContainer">
-          <span className="artistName">{ artistName }</span>
+          <span className="artistName artistNameDisplayNone">{ artistName }</span>
           <span className="trackName">{trackName}</span>
           <audio data-testid="audio-component" src={ previewUrl } controls>
             <track kind="captions" />

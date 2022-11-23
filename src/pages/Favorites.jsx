@@ -35,7 +35,10 @@ class Favorites extends Component {
       <main className="containerFav">
         <Header />
         <section className="favPage">
-          <div className="bgHeaderTop title">Músicas Favoritas</div>
+          <div className="bgHeaderTop title">
+            Minhas Músicas Favoritas
+            <span className="quantityMusics">{ `(${musicsFav.length})` }</span>
+          </div>
           { loading ? <Loading />
             : (
               <section className="musicFav">

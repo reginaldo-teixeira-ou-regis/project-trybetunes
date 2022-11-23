@@ -7,6 +7,7 @@ import '../styles/Search.css';
 import { ReactComponent as NothingFound } from '../images/nothingFound.svg';
 import '../styles/NotFound.css';
 import Footer from './Footer';
+import { ReactComponent as Lupa } from '../images/lupa.svg';
 
 class Search extends Component {
   state = {
@@ -45,27 +46,25 @@ class Search extends Component {
       <div className="pageSearch" data-testid="page-search">
         <Header />
         <div>
-          <section className="search bgHeaderTop">
-            <form>
-              <input
-                type="text"
-                name="artist"
-                data-testid="search-artist-input"
-                id="artist"
-                placeholder="Digite o nome da banda ou artista"
-                value={ artist }
-                onChange={ this.onChangeInput }
-              />
-              <button
-                type="button"
-                data-testid="search-artist-button"
-                disabled={ artist.length < +'2' }
-                onClick={ this.searchArtist }
-              >
-                Pesquisar
-              </button>
-            </form>
-          </section>
+          <form className="search bgHeaderTop">
+            <input
+              type="text"
+              name="artist"
+              data-testid="search-artist-input"
+              id="artist"
+              placeholder="Digite o nome da banda ou artista"
+              value={ artist }
+              onChange={ this.onChangeInput }
+            />
+            <button
+              type="button"
+              data-testid="search-artist-button"
+              disabled={ artist.length < +'2' }
+              onClick={ this.searchArtist }
+            >
+              <Lupa />
+            </button>
+          </form>
           <section className="containerSearch">
             { loading ? <Loading />
               : disappearResult

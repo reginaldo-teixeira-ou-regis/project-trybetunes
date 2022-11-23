@@ -24,14 +24,25 @@
 }
 
 .search button {
-  background-color: #00d5e2;
-  border-radius: 23px;
-  color: white;
+  align-items: center;
+  background-color: white;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+  display: flex;
+  font-weight: 700;
   height: 40px;
+  justify-content: center;
   left: 913px;
-  margin-left: 10px;
+  margin-left: 5px;
   top: 97px;
-  width: 114px;
+  width: 40px;
+}
+
+.search button:hover {
+  background: url('../images/BG\ AZUL.png') , linear-gradient(to bottom right, #003be5, #00d5e2);
+  border: 1px solid white;
+  transition: 0.5s;
 }
 
 .albumContainer {

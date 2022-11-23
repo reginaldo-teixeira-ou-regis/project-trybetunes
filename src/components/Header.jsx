@@ -68,7 +68,7 @@ class Header extends Component {
               <p data-testid="header-user-name">
                 { userName.name }
               </p>
-              <Link exact className="btnSair" to="/">Sair</Link>
+              <Link exact className="btnSair" to="/">sair</Link>
             </h3>
           )}
         </section>
