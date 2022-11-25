@@ -34,3 +34,9 @@
   justify-content: center;
   width: 100%;
 }
+
+.favFav {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}

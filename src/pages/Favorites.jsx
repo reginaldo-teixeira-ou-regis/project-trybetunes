@@ -45,12 +45,14 @@ class Favorites extends Component {
                 {
                   musicsFav
                     .map((music) => (
-                      <MusicCard
-                        key={ music.trackId }
-                        { ...music }
-                        fav
-                        callBack={ this.listFavorites }
-                      />))
+                      <div key={ music.trackId } className="favFav">
+                        <span className="artistName">{ music.artistName }</span>
+                        <MusicCard
+                          { ...music }
+                          fav
+                          callBack={ this.listFavorites }
+                        />
+                      </div>))
                 }
               </section>)}
           <Footer />
