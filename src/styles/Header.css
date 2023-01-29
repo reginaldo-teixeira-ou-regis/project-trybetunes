@@ -1,0 +1,106 @@
+/* stylelint-disable-next-line selector-max-specificity */
+#root:has( .sideBar ) > :first-child {
+  display: grid;
+  grid-template-columns: 211px calc(100% - 211px);
+}
+
+.logo {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  max-width: 250px;
+  min-width: 250px;
+  width: 100%;
+}
+
+.sideBar {
+  align-items: center;
+  background-color: white;
+  border-radius: 0;
+  border-right: 1px solid #003be5;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: 400;
+  height: 100vh;
+  justify-content: space-between;
+  left: 0;
+  padding: 28px 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.link {
+  align-items: center;
+  color: #c0c3c9;
+  display: flex;
+  font-size: 16px;
+  font-weight: 400;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.active {
+  color: #444955;
+  font-size: 17px;
+}
+
+.active svg path {
+  fill: #444955;
+}
+
+.sideBar section {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.picture {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  justify-content: baseline;
+}
+
+.picture img {
+  border: 1px solid #c0c3c9;
+  border-radius: 20px;
+  height: 40px;
+  max-width: 40px;
+  min-width: 40px;
+}
+
+.picture img, .picture p {
+  align-items: center;
+  display: flex;
+}
+
+.sec {
+  height: 40px;
+}
+
+.sideBar .loading img {
+  max-height: 40px;
+}
+
+.btnSair {
+  align-items: center;
+  background-color: white;
+  border: 1px solid red;
+  border-radius: 50%;
+  color: red;
+  display: flex;
+  font-size: 12px;
+  height: 25px;
+  padding: 10px 5px;
+  text-decoration: none;
+}
+
+.btnSair:hover {
+  background-color: red;
+  color: white;
+  transition: 0.5s;
+}

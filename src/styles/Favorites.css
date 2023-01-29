@@ -1,0 +1,42 @@
+.title {
+  color: white;
+  display: flex;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 21px;
+  text-align: center;
+}
+
+.quantityMusics {
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+.containerFav {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.musicFav {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+}
+
+.favPage:has( .loading ) .loading {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 180px);
+  justify-content: center;
+  width: 100%;
+}
+
+.favFav {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,8 @@
+.noResultFound {
+  align-items: center;
+  color: #3d495c;
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+  justify-content: center;
+}
